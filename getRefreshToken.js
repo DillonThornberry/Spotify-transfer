@@ -12,7 +12,7 @@ require('dotenv').config()
  
 const redirect_uri = 'https://webhook.site/544c38a3-c508-4168-9a53-d742e06e7b93'
  
-const code = 'AQAIfPTmCYVibCY-9d5fdGhoTTTmnK8iK5JXfYA-QTjcpACgLjBRF108Aahdx2cHHQ4MJQ2K3olazDipP7yfurqL2S1J-8MrEDAKWQdTgrmQU-RmNGFAZr-9UFxmlUHVGbP0mOANsMgcxehJ3PqPQxzsQx5fk7Yd4JDR3YL0JnYa4NkyTDAGjNeF2FBSj00Th1fhSha_y00sEbNCJkk0vJ0kCoCCpJc1UtKT6eYCbt4'
+const code = process.env.CODE
 var authOptions = {
     url: 'https://accounts.spotify.com/api/token',
     form: {
