@@ -1,10 +1,11 @@
 const getToken = require('./getAccessToken.js').getToken
 const getSongs = require('./getSongs.js').getSongs
+const likeSongs = require('./likeSongs.js').likeSongs
 
-const main = async (oldAccount) => {
-    const token = await getToken(oldAccount)
+const main = async (fromOldAccount) => {
+    const token = await getToken(fromOldAccount)
 
-    if (oldAccount) {
+    if (fromOldAccount) {
         getSongs(token)
     }
 
@@ -13,5 +14,5 @@ const main = async (oldAccount) => {
     }
 }
 
-const oldAccount = process.argv[2] == 'old'
-main(oldAccount)
+const fromOldAccount = process.argv[2] == 'old'
+main(fromOldAccount)
