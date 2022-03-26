@@ -4,6 +4,11 @@ const likeSongs = require('./likeSongs.js').likeSongs
 
 const main = async (fromOldAccount) => {
     const token = await getToken(fromOldAccount)
+    if (token){
+        console.log('Access token successfully received')
+    } else {
+        return console.log('Failed to get token')
+    }
 
     if (fromOldAccount) {
         getSongs(token)
